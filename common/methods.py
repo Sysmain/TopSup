@@ -37,7 +37,7 @@ def open_webbrowser_count(question,choices):
 def count_base(question,choices):
     print('\n-- 方法3： 题目搜索结果包含选项词频计数法 --\n')
     # 请求
-    req = requests.get(url='http://www.baidu.com/s', params={'wd':question})
+    req = requests.get(url='http://www.baidu.com/s', params={'wd':question + str(choices)})
     content = req.text
     #print(content)
     counts = []
